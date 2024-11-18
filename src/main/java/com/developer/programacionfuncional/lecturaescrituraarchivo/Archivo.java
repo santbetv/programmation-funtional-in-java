@@ -29,7 +29,10 @@ public class Archivo {
 
     public void escribirEnArchivo() {
         try {
-            Path path = Files.writeString(Path.of("/home/rizzoli/Documentos/intellijIDEA/exercises/ProgramacionFuncional/src/main/java/com/developer/programacionfuncional/lecturaescrituraarchivo/pruebaa.txt"), "Java 11", StandardOpenOption.CREATE_NEW);
+            Path path = Files.writeString(Path.of("/home/rizzoli/Documentos/intellijIDEA/exercises/ProgramacionFuncional/src/main/java/com/developer/programacionfuncional/lecturaescrituraarchivo/pruebaa.txt"),
+                    "Java 11",
+                    StandardOpenOption.CREATE, // Cambiado a CREATE para permitir escritura en archivos existentes
+                    StandardOpenOption.TRUNCATE_EXISTING); // Opcional: sobrescribe el contenido si el archivo ya existe
             System.out.println(path);
             String s = Files.readString(path);
             System.out.println(s);

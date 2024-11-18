@@ -54,7 +54,7 @@ public class Lambda {
     public void sumar() {
 
         //Se utiliza para apoyo en las posibles definiciones aritmeticas que yo requiero
-        IOperacion operacion = (double x, double y) -> (x + y);
+        Operacion operacion = (double x, double y) -> (x + y);
         double resultado = operacion.calcular(2, 2.0);
         System.out.println(resultado);
 

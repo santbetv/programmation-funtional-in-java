@@ -16,7 +16,7 @@ package com.developer.programacionfuncional.funtionalinterfacelambda;
  * interfaces.
  */
 @FunctionalInterface
-public interface IOperacion {
+public interface Operacion {
 
     double calcular(double n1, double n2);
 
